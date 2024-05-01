@@ -2,9 +2,9 @@ const powderElement = document.getElementById('powder');
 const totalGramsInput = document.getElementById('total-grams');
 const sugarRatioInput = document.getElementById('sugar-ratio');
 const sugarRatioValue = document.getElementById('sugar-ratio-value');
-const sugarTbspElement = document.getElementById('sugar-tbsp');
-const cocoaTbspElement = document.getElementById('cocoa-tbsp');
-const tbspPerGram = 0.177;
+const sugarSpElement = document.getElementById('sugar-sp');
+const cocoaSpElement = document.getElementById('cocoa-sp');
+const gramPerSp = 5.73;
 
 function updatePowderRatio() {
   const totalGrams = parseInt(totalGramsInput.value);
@@ -15,8 +15,8 @@ function updatePowderRatio() {
 
   powderElement.style.height = `${cocoaGrams / totalGrams * 100}%`;
   sugarRatioValue.textContent = `${sugarRatio}%`;
-  sugarTbspElement.textContent = (sugarGrams * tbspPerGram).toFixed(2);
-  cocoaTbspElement.textContent = (cocoaGrams * tbspPerGram).toFixed(2);
+  sugarSpElement.textContent = (sugarGrams / gramPerSp).toFixed(2);
+  cocoaSpElement.textContent = (cocoaGrams / gramPerSp).toFixed(2);
 }
 
 totalGramsInput.addEventListener('input', updatePowderRatio);
