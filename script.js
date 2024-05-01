@@ -19,7 +19,7 @@ function updatePowderRatio() {
   cocoaTbspElement.textContent = (cocoaGrams * tbspPerGram).toFixed(2);
 }
 
-sugarRatioInput.addEventListener('input', updatePowderRatio);
+totalGramsInput.addEventListener('input', updatePowderRatio);
 sugarRatioInput.addEventListener('input', updatePowderRatio);
 
 updatePowderRatio();
