@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cocoa Powder Box Simulator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cocoa Powder Box Simulator</h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="powder-container">
+            <div class="powder" id="powder"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="control-group">
+            <label for="total-grams">Total Grams of Powder:</label>
+            <input type="number" id="total-grams" min="1" value="100">
+          </div>
+          <div class="control-group">
+            <label for="sugar-ratio">Sugar Ratio:</label>
+            <input type="range" id="sugar-ratio" min="0" max="100" value="0">
+            <span id="sugar-ratio-value">0%</span>
+          </div>
+          <div class="result">
+            <p>Sugar in the box: <span id="sugar-tbsp">0</span> tbsp</p>
+            <p>Cocoa in the box: <span id="cocoa-tbsp">0</span> tbsp</p>
+          </div>
+        </div>
+      </div>
+      <p class="about">This simulation demonstrates the composition of a typical industrial cocoa powder box, which often contains an excessive amount of sugar. You can adjust the total grams of powder and the sugar ratio to see the corresponding amounts of sugar and cocoa in the box.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
